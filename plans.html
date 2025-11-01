@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Fever - Membership Plans</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <div class="sidebar-slide" id="sidebarMenu">
+        
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">
+                <img src="image.png" alt="Logo" />
+                Fitness <span>Fever</span>
+            </a>
+            <i class="fa-solid fa-xmark" id="closeMenu"></i>
+        </div>
+
+        <a href="index.html" class="sidebar-link">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="about.html" class="sidebar-link">
+            <i class="fa-solid fa-users"></i>
+            <span>About Us</span>
+        </a>
+        <a href="services.html" class="sidebar-link">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            <span>Services</span>
+        </a>
+        <a href="plans.html" class="sidebar-link active">
+            <i class="fa-solid fa-sack-dollar"></i>
+            <span>Plans</span>
+        </a>
+        <a href="reviews.html" class="sidebar-link">
+            <i class="fa-solid fa-star"></i>
+            <span>Reviews</span>
+        </a>
+        <a href="contact.html" class="sidebar-link">
+            <i class="fa-solid fa-phone"></i>
+            <span>Contact</span>
+        </a>
+
+        <a href="plans.html" class="sidebar-cta">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            **Join Today!**
+        </a>
+    </div>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="image.png" alt="Logo" />
+            Fitness <span>Fever</span>
+        </a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="plans.html" class="active">Plans</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="plans.html" class="btn nav-btn">GET STARTED</a>
+    </header>
+
+    <main>
+        <section style="padding-top: 100px;"></section>
+
+        <section class="plans" id="plans">
+            <div class="main-text">
+                <h2>Flexible **Membership** Plans</h2>
+                <p>Choose the plan that fits your lifestyle and start your fitness journey today. No hidden fees, just results.</p>
+            </div>
+            
+            <div class="plan-content">
+                
+                <div class="card">
+                    <h3>Starter Access</h3>
+                    <div class="price">$39<span>/month</span></div>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Standard Gym Access</li>
+                        <li style="color: red;"><i class="fa-solid fa-times"></i> Group Classes Included</li>
+                        <li><i class="fa-solid fa-times"></i> Personal Trainer Sessions</li>
+                    </ul>
+                    <a href="#" class="btn plan-btn">SIGN UP</a>
+                </div>
+
+                <div class="card popular">
+                    <span class="best-value">BEST VALUE</span>
+                    <h3>Premium Pro</h3>
+                    <div class="price">$59<span>/month</span></div>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> **Full 24/7 Gym Access**</li>
+                        <li><i class="fa-solid fa-check"></i> **Unlimited Group Classes**</li>
+                        <li><i class="fa-solid fa-check"></i> Monthly Trainer Check-in</li>
+                    </ul>
+                    <a href="#" class="btn plan-btn">SELECT PLAN</a>
+                </div>
+
+                <div class="card">
+                    <h3>Elite Max</h3>
+                    <div class="price">$99<span>/month</span></div>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> **Weekly 1-on-1 Trainer Session**</li>
+                        <li><i class="fa-solid fa-check"></i> **Personalized Meal Plan**</li>
+                        <li><i class="fa-solid fa-check"></i> VIP Locker & Sauna Access</li>
+                    </ul>
+                    <a href="#" class="btn plan-btn">GO ELITE</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-box">
+            <a href="index.html" class="logo">
+                <img src="image.png" alt="Logo" />
+                Fitness <span>Fever</span>
+            </a>
+            <p>Your journey to fitness starts here. We are committed to health, excellence, and community.</p>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Our Services</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-box">
+            <h3>Contact Info</h3>
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-location-dot"></i> 123 Fitness St, Mumbai</a></li>
+                <li><a href="#"><i class="fa-solid fa-phone"></i> +91 987 654 3210</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        &copy; 2024 Fitness Fever. All Rights Reserved.
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebarMenu = document.getElementById('sidebarMenu');
+        const closeMenu = document.getElementById('closeMenu');
+
+        // Open the menu when the toggle button is clicked
+        menuToggle.addEventListener('click', () => {
+            sidebarMenu.classList.add('open');
+        });
+
+        // Close the menu when the close icon is clicked
+        closeMenu.addEventListener('click', () => {
+            sidebarMenu.classList.remove('open');
+        });
+
+        // Close menu when any link is clicked (for seamless navigation)
+        document.querySelectorAll('.sidebar-link').forEach(link => {
+            link.addEventListener('click', () => {
+                sidebarMenu.classList.remove('open');
+            });
+        });
+    </script>
+
+</body>
+</html>
