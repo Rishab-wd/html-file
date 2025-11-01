@@ -8,6 +8,25 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 <body>
+  
+  <div class="sidebar-slide" id="sidebarMenu">
+    <div class="sidebar-header">
+      <a href="index.html" class="logo">
+        <img src="image.png" alt="Fitness Fever Logo" />
+        Fitness <span>Fever</span>
+      </a>
+      <i class="fa-solid fa-xmark" id="closeMenu"></i>
+    </div>
+
+    <a href="index.html" class="sidebar-link"><i class="fa-solid fa-house"></i><span>Home</span></a>
+    <a href="about.html" class="sidebar-link"><i class="fa-solid fa-users"></i><span>About Us</span></a>
+    <a href="services.html" class="sidebar-link"><i class="fa-solid fa-hand-holding-heart"></i><span>Services</span></a>
+    <a href="plans.html" class="sidebar-link"><i class="fa-solid fa-sack-dollar"></i><span>Plans</span></a>
+    <a href="reviews.html" class="sidebar-link"><i class="fa-solid fa-star"></i><span>Reviews</span></a>
+    <a href="contact.html" class="sidebar-link active"><i class="fa-solid fa-phone"></i><span>Contact</span></a>
+
+    <a href="plans.html" class="sidebar-cta"><i class="fa-solid fa-arrow-right-to-bracket"></i>Join Today!</a>
+  </div>
 
   <!-- ===== HEADER ===== -->
   <header>
@@ -16,20 +35,23 @@
       Fitness <span>Fever</span>
     </a>
 
-    <ul class="navbar">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html#services">Services</a></li>
-      <li><a href="services.html#plans">Plans</a></li>
-      <li><a href="services.html#review">Reviews</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="plans.html">Plans</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
 
-    <a href="services.html#plans" class="nav-btn">Join Now</a>
+    <a href="plans.html" class="btn nav-btn">GET STARTED</a>
+    <div class="menu-toggle" id="menuToggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
   </header>
 
   <!-- ===== PAGE SPACING ===== -->
-  <section style="padding-top: 100px;"></section>
+  <section class="spacer"></section>
 
   <!-- ===== CONTACT SECTION ===== -->
   <section class="footer" id="contact">
@@ -77,5 +99,24 @@
     © 2025 Fitness Fever | All Rights Reserved
   </div>
 
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebarMenu = document.getElementById('sidebarMenu');
+    const closeMenu = document.getElementById('closeMenu');
+
+    menuToggle.addEventListener('click', () => {
+      sidebarMenu.classList.add('open');
+    });
+
+    closeMenu?.addEventListener('click', () => {
+      sidebarMenu.classList.remove('open');
+    });
+
+    document.querySelectorAll('.sidebar-link').forEach(link => {
+      link.addEventListener('click', () => {
+        sidebarMenu.classList.remove('open');
+      });
+    });
+  </script>
 </body>
 </html>
