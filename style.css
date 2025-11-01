@@ -42,7 +42,11 @@ body {
 }
 
 /* Make media elements responsive by default */
-img, video, svg, canvas, iframe {
+img,
+video,
+svg,
+canvas,
+iframe {
     max-width: 100%;
     height: auto;
 }
@@ -177,7 +181,8 @@ header {
     z-index: 1500;
     /* Highest Z-index to always be on top */
     transition: var(--transition);
-    display: none; /* hidden on desktop */
+    display: none;
+    /* hidden on desktop */
 }
 
 .menu-toggle:hover {
@@ -464,11 +469,15 @@ section::before {
     padding-right: 10%;
     background: var(--dark-color);
 }
+
 .spacer::before {
     display: none;
 }
+
 @media (max-width: 600px) {
-    .spacer { height: 80px; }
+    .spacer {
+        height: 80px;
+    }
 }
 
 main {
@@ -608,10 +617,10 @@ main {
 /* 6. SERVICES SECTION */
 /* ======================================= */
 .services {
-    background: url('service-bg.jpg') center fixed no-repeat;
+
     background-size: cover;
-    padding-top: 120px;
-    padding-bottom: 80px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .services::before {
@@ -1034,6 +1043,7 @@ main {
 }
 
 @media (max-width: 900px) {
+
     /* Show hamburger menu on tablets and phones */
     .menu-toggle {
         display: block;
@@ -1087,8 +1097,8 @@ main {
     .plans,
     .review,
     .core-values {
-        padding-top: 110px;
-        padding-bottom: 70px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 }
 
@@ -1146,8 +1156,8 @@ main {
     .plans,
     .review,
     .core-values {
-        padding-top: 100px;
-        padding-bottom: 60px;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 
     .main-text h2 {
@@ -1171,5 +1181,152 @@ main {
     .sidebar-slide {
         width: 100%;
         max-width: 360px;
+    }
+}
+
+/* ========================= */
+/* CONTACT PAGE STYLES */
+/* ========================= */
+
+.contact-hero {
+    background: url('contact-bg.jpg') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-section {
+    background: var(--dark-color);
+    color: var(--white);
+    padding: 100px 10%;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 280px;
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    color: #ccc;
+}
+
+.contact-info p i {
+    color: var(--main-color);
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.contact-form {
+    flex: 1.2;
+    min-width: 320px;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    backdrop-filter: blur(10px);
+
+}
+
+.contact-form .input-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    outline: none;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #bbb;
+}
+
+.map {
+    margin-top: 60px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+    .contact-section {
+        padding: 80px 5%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-form,
+    .contact-info {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-hero {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 60px 5%;
+    }
+
+    .contact-form {
+        padding: 25px 20px;
+        min-width: 100%;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+
+    .contact-form .input-group {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .main-text h2 {
+        font-size: 2rem;
+    }
+
+    .main-text p {
+        font-size: 1rem;
     }
 }
