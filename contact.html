@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,12 +8,14 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
+
 <body>
-  
+
+  <!-- ===== MENU ===== -->
   <div class="sidebar-slide" id="sidebarMenu">
     <div class="sidebar-header">
       <a href="index.html" class="logo">
-        <img src="image.png" alt="Fitness Fever Logo" />
+        <img src="image_c4271d.jpg" alt="Fitness Fever Logo" />
         Fitness <span>Fever</span>
       </a>
       <i class="fa-solid fa-xmark" id="closeMenu"></i>
@@ -50,51 +53,61 @@
     </div>
   </header>
 
-  <!-- ===== PAGE SPACING ===== -->
-  <section class="spacer"></section>
+  <!-- ===== SPACER ===== -->
 
   <!-- ===== CONTACT SECTION ===== -->
-  <section class="footer" id="contact">
+  <section class="contact-section" id="contact">
     <div class="main-text">
-      <h2>Get In Touch!</h2>
-      <p>We're ready when you are. Reach out to start your fitness journey today.</p>
+      <h2>Contact <strong>Us</strong></h2>
+      <p>Fill out the form below and we'll get back to you as soon as possible.</p>
     </div>
 
-    <div class="footer-container">
-      
-      <!-- Contact Info -->
-      <div class="footer-box contact-info">
-        <h3>Contact Details</h3>
-        <span><i class="fa-solid fa-location-dot"></i> Mumbai, India</span>
-        <span><i class="fa-solid fa-phone"></i> +91 98765 43210</span>
-        <span><i class="fa-solid fa-envelope"></i> support@fitnessfever.com</span>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="footer-box quick-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html#services">Services</a></li>
-          <li><a href="services.html#plans">Plans</a></li>
-          <li><a href="about.html">About Us</a></li>
-        </ul>
-      </div>
-
-      <!-- Social Links -->
-      <div class="footer-box social">
-        <h3>Follow Us</h3>
-        <p>Join our community for tips and motivation.</p>
-        <div class="social-links">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    <div class="contact-container">
+      <!-- Contact Form -->
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Form submitted!');">
+        <div class="input-group">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <input type="number" placeholder="Your Phone Number " required>
         </div>
-      </div>
+        <button type="submit" class="btn hero-btn">Send Message</button>
+      </form>
     </div>
   </section>
 
-  <!-- ===== COPYRIGHT ===== -->
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-box">
+      <a href="index.html" class="logo">
+        <img src="image.png" alt="Logo" />
+        Fitness <span>Fever</span>
+      </a>
+      <p>Your journey to fitness starts here. We are committed to health, excellence, and community.</p>
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Our Services</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-box">
+      <h3>Contact Info</h3>
+      <ul>
+        <li><a href="https://maps.app.goo.gl/XhLPPfWtBn69pWQ76" target="_blank"><i class="fa-solid fa-location-dot"></i>
+            Gr.Floor, Suraj Palace, Navghar Rd, next to Sri Ram Jewellers, Bhayandar, Shiv Kripa Chawl, Bhayandar East,
+            Mira Bhayandar, Maharashtra 401105</a></li>
+        <li><a href="#"><i class="fa-solid fa-phone"></i> +91 987 654 3210</a></li>
+      </ul>
+    </div>
+  </footer>
+
   <div class="copyright">
     © 2025 Fitness Fever | All Rights Reserved
   </div>
@@ -104,19 +117,10 @@
     const sidebarMenu = document.getElementById('sidebarMenu');
     const closeMenu = document.getElementById('closeMenu');
 
-    menuToggle.addEventListener('click', () => {
-      sidebarMenu.classList.add('open');
-    });
-
-    closeMenu?.addEventListener('click', () => {
-      sidebarMenu.classList.remove('open');
-    });
-
-    document.querySelectorAll('.sidebar-link').forEach(link => {
-      link.addEventListener('click', () => {
-        sidebarMenu.classList.remove('open');
-      });
-    });
+    menuToggle.addEventListener('click', () => sidebarMenu.classList.add('open'));
+    closeMenu?.addEventListener('click', () => sidebarMenu.classList.remove('open'));
+    document.querySelectorAll('.sidebar-link').forEach(link => link.addEventListener('click', () => sidebarMenu.classList.remove('open')));
   </script>
 </body>
+
 </html>
