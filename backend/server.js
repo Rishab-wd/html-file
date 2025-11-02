@@ -9,7 +9,7 @@ const app = express();
 
 // --- Middleware ---
 app.use(cors({
-  origin: 'https://special-space-tribble-5g5wwvq9rxxp275rj-5500.app.github.dev',
+  origin: 'https://fitnessfever-gym.vercel.app',
   methods: ['POST', 'GET'],
   allowedHeaders: ['Content-Type'],
 }));
