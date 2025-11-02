@@ -457,9 +457,10 @@ section::before {
 .services,
 .plans,
 .review {
-    background: none;
-    transform: none;
-    filter: none;
+    background: var(--dark-color);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
 }
 
 /* Spacer utility: creates vertical space below fixed header without any overlay */
@@ -515,10 +516,10 @@ main {
 /* 5. CORE VALUES SECTION (Dark Theme Unified) */
 /* ======================================= */
 .core-values {
-    /* CRITICAL FIX: Forces dark background to blend with hero */
-    background: var(--dark-color);
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('hero-bg.jpg') center/cover no-repeat fixed;
     color: var(--white);
     padding: 120px 10%;
+    position: relative;
 }
 
 .core-values .main-text h2 {
@@ -617,8 +618,10 @@ main {
 /* 6. SERVICES SECTION */
 /* ======================================= */
 .services {
-
-    background-size: cover;
+    background: var(--dark-color);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -761,8 +764,10 @@ main {
 /* 8. PLANS SECTION (Pricing) */
 /* ======================================= */
 .plans {
-    background: url('plans-bg.jpg') center fixed no-repeat;
-    background-size: cover;
+    background: var(--dark-color);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
     padding-top: 120px;
     padding-bottom: 80px;
 }
@@ -883,10 +888,10 @@ main {
 /* 9. REVIEWS SECTION (Testimonials) */
 /* ======================================= */
 .review {
-    background: url('reviews-bg.jpg') center fixed no-repeat;
-    background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('hero-bg.jpg') center/cover no-repeat fixed;
     padding-top: 120px;
     padding-bottom: 80px;
+    position: relative;
 }
 
 .review::before {
@@ -1092,14 +1097,7 @@ main {
     }
 
     /* Adjust section padding for tablets */
-    .about,
-    .services,
-    .plans,
-    .review,
-    .core-values {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
+
 }
 
 @media (max-width: 600px) {
@@ -1151,14 +1149,6 @@ main {
     }
 
     /* Adjust section padding for mobile */
-    .about,
-    .services,
-    .plans,
-    .review,
-    .core-values {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
 
     .main-text h2 {
         font-size: 2rem;
@@ -1189,12 +1179,17 @@ main {
 /* ========================= */
 
 .contact-hero {
-    background: url('contact-bg.jpg') center/cover no-repeat;
+    background: var(--dark-color);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
     height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding-top: 10px;
+
 }
 
 .contact-section {
