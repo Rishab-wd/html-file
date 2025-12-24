@@ -826,8 +826,8 @@ main {
 
 .plan-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 60px;
     position: relative;
     z-index: 1;
 }
