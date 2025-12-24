@@ -2,13 +2,8 @@ const express = require('express');
 const router = express.Router();
 const Contact = require('../models/contact');
 
-router.get('/', async (req, res) => {
-  console.log("You are on the backend");
-  res.send("✅ You reached the backend successfully!");
-});
-
 // POST route — add a new contact
-router.post('/contact', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const { name, email, phoneNumber } = req.body;
 

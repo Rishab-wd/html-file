@@ -9,27 +9,18 @@ const app = express();
 
 // --- Middleware ---
 app.use(cors({
-  origin: 'https://fitnessfever-gym.vercel.app', // your frontend domain
+  origin: '*', // replace with your domain in production
   methods: ['POST', 'GET'],
-  allowedHeaders: ['Content-Type'],
 }));
 app.use(express.json());
 
 // --- Routes ---
-app.use('/api', contactRoutes);
+app.use('/api/contact', contactRoutes);
 
 // --- Database Connection ---
-console.log('🧩 Checking Mongo URI:', process.env.MONGO_URI); // Debug log
-
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => console.log('✅ MongoDB Connected Successfully'))
-.catch(err => {
-  console.error('❌ MongoDB Connection Failed:', err.message);
-  console.error('🧠 Full Error Object:', err);
-});
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('✅ MongoDB Connected'))
+  .catch(err => console.error('❌ DB Connection Error:', err));
 
 // --- Start Server ---
 const PORT = process.env.PORT || 5000;
