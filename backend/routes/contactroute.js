@@ -10,13 +10,6 @@ router.post('/', async (req, res) => {
     if (!name || !email || !phoneNumber) {
       return res.status(400).json({ message: 'All fields are required' });
     }
-
-    // Check if the email already exists
-    const existing = await Contact.findOne({ email });
-    if (existing) {
-      return res.status(409).json({ message: 'Email already exists' });
-    }
-
     const newContact = new Contact({ name, email, phoneNumber });
     await newContact.save();
 
