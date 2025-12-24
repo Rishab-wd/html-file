@@ -11,7 +11,6 @@ const contactSchema = new mongoose.Schema({
     required: [true, 'Email is required'],
     trim: true,
     lowercase: true,
-    unique: true, // prevent duplicates
     match: [/^\S+@\S+\.\S+$/, 'Invalid email format']
   },
   phoneNumber: {
