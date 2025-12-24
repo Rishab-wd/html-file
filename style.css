@@ -424,6 +424,46 @@ header {
     }
 }
 
+/* Improve hero scaling and background behavior on small screens */
+@media (max-width: 900px) {
+    .home {
+        min-height: 480px;
+        padding: 80px 5% 40px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home::before {
+        /* Avoid fixed background on mobile for performance */
+        background-attachment: scroll;
+    }
+
+    .home-text h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .home {
+        min-height: 420px;
+        padding: 60px 4% 30px;
+    }
+
+    .home-text h1 {
+        font-size: 2.25rem;
+    }
+
+    /* Reduce heavy parallax and fixed attachments on small devices */
+    section::before,
+    .core-values,
+    .about,
+    .review {
+        background-attachment: scroll;
+        transform: none;
+        filter: none;
+    }
+}
+
 section {
     /* Padding is now standard since sidebar is hidden by default */
     padding: 0px 10%;
@@ -743,6 +783,7 @@ main {
 }
 
 .about-text p {
+    font-size: 1.2rem;
     color: #c5c5c5;
     line-height: 1.8;
     margin-bottom: 25px;
