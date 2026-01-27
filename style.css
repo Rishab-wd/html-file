@@ -826,7 +826,7 @@ main {
 
 .plan-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 60px;
     position: relative;
     z-index: 1;
@@ -1086,6 +1086,20 @@ main {
         padding-left: 5%;
         padding-right: 5%;
     }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .logo img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .nav-btn {
+        padding: 8px 15px;
+        font-size: 0.95rem;
+    }
 }
 
 @media (max-width: 900px) {
@@ -1137,7 +1151,19 @@ main {
         display: inline-block;
     }
 
-    /* Adjust section padding for tablets */
+    /* Plans section responsive on tablets */
+    .plan-content {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+    }
+
+    .card {
+        padding: 35px 25px;
+    }
+
+    .card.popular {
+        transform: scale(1.04);
+    }
 
 }
 
@@ -1213,6 +1239,38 @@ main {
         width: 100%;
         max-width: 360px;
     }
+
+    /* Plans section fully responsive on mobile */
+    .plan-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+
+    .card h3 {
+        font-size: 1.5rem;
+    }
+
+    .card .price {
+        font-size: 2.5rem;
+    }
+
+    .card ul li {
+        font-size: 0.95rem;
+    }
+
+    .card.popular {
+        transform: scale(1);
+    }
+
+    .best-value {
+        font-size: 0.85rem;
+        padding: 5px 15px;
+    }
+
 }
 
 /* ========================= */
