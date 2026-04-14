@@ -9,7 +9,7 @@ const app = express();
 
 // --- Middleware ---
 app.use(cors({
-  origin: '*', // replace with your domain in production
+  origin: 'www.fitnessfevergym.com', // replace with your domain in production
   methods: ['POST', 'GET'],
 }));
 app.use(express.json());
