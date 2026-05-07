@@ -9,7 +9,7 @@ const Home = () => {
                     <h1>Transform Your Body <span>Achieve Your Goals</span></h1>
                     <p>Unleash your potential with personalized training, cutting-edge equipment, and a supportive
                         community. Start your journey today!</p>
-                    <a href="https://wa.me/919833143308?text=Hello%20I%20am%20interested" className="btn hero-btn">JOIN NOW</a>
+                    <a href="https://wa.me/919820555607?text=Hello%20I%20am%20interested" className="btn hero-btn" target="_blank" rel="noopener noreferrer">JOIN NOW</a>
                 </div>
             </section>
 

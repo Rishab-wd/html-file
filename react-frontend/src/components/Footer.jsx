@@ -41,7 +41,7 @@ const Footer = () => {
                             <a href="https://maps.app.goo.gl/RN9WdbBnuoLrmWRa7" target="_blank" rel="noopener noreferrer">
                                 <i className="fa-solid fa-location-dot"></i> Mira Road </a>
                         </li>
-                        <li><a href="https://wa.me/919833143308?text=Hello%20I%20am%20interested"><i className="fa-solid fa-phone"></i> +91 9833143308</a></li>
+                        <li><a href="https://wa.me/919820555607?text=Hello%20I%20am%20interested"><i className="fa-solid fa-phone"></i> +91 9820555607</a></li>
                     </ul>
                 </div>
             </footer>

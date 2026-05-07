@@ -48,6 +48,7 @@ const testimonials = [
     {
         id: 5,
         name: 'Sneha Kapoor',
+        img:'',
         rating: 5,
         halfStar: false,
         text: "As someone who was nervous about starting at a gym, the team at Fitness Fever made me feel welcome from day one. My trainer designed a beginner-friendly program and I've been making steady progress. The positive energy here is unmatched!",

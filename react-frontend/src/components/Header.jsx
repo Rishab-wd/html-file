@@ -18,7 +18,7 @@ const Header = ({ activePage }) => {
                 <Link to="/contact" className={activePage === 'contact' ? 'active' : ''}>Contact</Link>
             </nav>
 
-            <a href="https://wa.me/919833143308?text=Hello%20I%20am%20interested" className="btn nav-btn">GET STARTED</a>
+            <a href="https://wa.me/919820555607?text=Hello%20I%20am%20interested" className="btn nav-btn" target="_blank" rel="noopener noreferrer">GET STARTED</a>
             <div className="menu-toggle" id="menuToggle">
                 <i className="fa-solid fa-bars"></i>
             </div>
